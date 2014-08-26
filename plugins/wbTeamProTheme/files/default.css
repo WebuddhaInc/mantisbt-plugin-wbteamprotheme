@@ -1,0 +1,111 @@
+
+/************************************************************************************************************************************
+ *
+ * wbTeamProTheme plugin for MantisBT
+ * 2013 - David Hunt, Webuddha.com
+ *
+ ************************************************************************************************************************************/
+
+/*******************************************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+/*******************************************************************************************/
+body {
+  background:#F5F5F5;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme {
+  background:#FFF;
+  width:1000px;
+  margin:0 auto;
+  padding:0;
+  box-shadow:0 0 8px #BBB;
+}
+.wbTeamProTheme > div {
+  padding:15px 10px 15px 10px;
+}
+.wbTeamProTheme .logo {
+  float:left;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme h3 {
+  color:#336699;
+  font-family: 'Roboto Condensed', sans-serif!important;
+  font-size:18px;
+  font-weight:normal;
+  margin:0;
+  padding:0 0 5px 0;
+}
+.wbTeamProTheme h4 {
+  color:#003377;
+  font-family: 'Roboto Condensed', sans-serif!important;
+  font-size:15px;
+  font-weight:normal;
+  margin:0;
+  padding:0 0 5px 0;
+}
+
+
+/*******************************************************************************************/
+.wbTeamProTheme form select,
+.wbTeamProTheme form input[type=text],
+.wbTeamProTheme form textarea {
+  padding:4px;
+  font-size:14px;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme .buttons_view_bug tr td {
+  white-space:nowrap;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme .please-login {
+  font-size:14px;
+  padding:10px 0;
+  margin:10px auto;
+  width:80%;
+  border-radius:4px;
+  background-color:#FFFFCC;
+  border:1px solid #EEEECC;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme input.button,
+.wbTeamProTheme input.button-small {
+  border-radius:2px;
+  border:1px solid #999;
+  background:#EEE;
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFEF', endColorstr='#CCCCCC'); /* for IE */
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#CCCCCC)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #EFEFEF,  #CCCCCC); /* for firefox 3.6+ */
+  padding:2px 6px;
+  color:#333;
+}
+.wbTeamProTheme input.button.btn_vote {
+  background-color:#6699FF;
+  border:1px solid #777;
+  color:#FFF;
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6699FF', endColorstr='#4477DD'); /* for IE */
+  background: -webkit-gradient(linear, left top, left bottom, from(#6699FF), to(#4477DD)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  #6699FF,  #4477DD); /* for firefox 3.6+ */
+}
+.wbTeamProTheme input.button[disabled=disabled] {
+  border:1px solid #CCC;
+  background:#EEE;
+  color:#999;
+}
+
+/*******************************************************************************************/
+.wbTeamProTheme tr.row-1 { background-color: #F0F0F0; }
+.wbTeamProTheme tr.row-2 { background-color: #F0F0F0; }
+.wbTeamProTheme td.category { background-color: #DDDDDD; }
+.wbTeamProTheme tr.row-category,
+.wbTeamProTheme tr.row-category2 { background-color: #DDDDDD; }
+.wbTeamProTheme tr.row-category a,
+.wbTeamProTheme tr.row-category2 a {}
+.wbTeamProTheme tr td .issue-status {
+  border:none;
+}

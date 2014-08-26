@@ -1,0 +1,13 @@
+<?php
+
+/************************************************************************************************************************************
+ *
+ * wbTeamProTheme plugin for MantisBT
+ * 2013 - David Hunt, Webuddha.com
+ *
+ ************************************************************************************************************************************/
+
+$s_plugin_wbteamprotheme_title = 'wbTeamPro Theme';
+$s_plugin_wbteamprotheme_description = 'wbTeamPro Theme for Mantis Bug Tracker';
+
+$s_plugin_wbteamprotheme_header_config = 'Configuration';
