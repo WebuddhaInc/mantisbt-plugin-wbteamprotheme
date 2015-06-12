@@ -188,6 +188,11 @@ body {
 .wbTeamProTheme .width100 .menu a[href*=view_all_bug_page] {
   display: none;
 }
+.wbTeamProTheme .width100 .menu a[href*=logout] {
+  background-color: #eee;
+  border-bottom: 2px solid #ddd;
+  color: gray;
+}
 .wbTeamProTheme .width100 .menu.right {
   width: auto;
   position: absolute;

@@ -27,9 +27,9 @@ class wbTeamProThemePlugin extends MantisPlugin  {
     $this->description = lang_get( 'plugin_wbteamprotheme_description' );
     $this->page = 'config';
 
-    $this->version = '1.0';
+    $this->version = '1.1';
     $this->requires = array(
-      'MantisCore' => '1.2.0',
+      'MantisCore' => '1.2.19',
     );
 
     $this->author   = 'David Hunt, Webuddha.com';
