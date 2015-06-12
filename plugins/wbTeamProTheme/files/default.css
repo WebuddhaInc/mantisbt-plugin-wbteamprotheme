@@ -1,111 +1,324 @@
-
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(/plugin_file.php?file=wbTeamProTheme/normalize.css);
 /************************************************************************************************************************************
  *
  * wbTeamProTheme plugin for MantisBT
  * 2013 - David Hunt, Webuddha.com
  *
  ************************************************************************************************************************************/
-
 /*******************************************************************************************/
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
-
 /*******************************************************************************************/
 body {
-  background:#F5F5F5;
+  margin: 0;
+  padding: 0;
+  background: #F5F5F5;
 }
-
 /*******************************************************************************************/
 .wbTeamProTheme {
-  background:#FFF;
-  width:1000px;
-  margin:0 auto;
-  padding:0;
-  box-shadow:0 0 8px #BBB;
+  background: #FFF;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  box-shadow: 0 0 8px 0 #BBB;
+  /*******************************************************************************************/
+  /*******************************************************************************************/
+  /*******************************************************************************************/
+  /*******************************************************************************************/
+  /*******************************************************************************************/
+  /*******************************************************************************************/
 }
-.wbTeamProTheme > div {
-  padding:15px 10px 15px 10px;
+.wbTeamProTheme #bodycolpad {
+  position: relative;
+  padding: 15px 10px 15px 10px;
+}
+.wbTeamProTheme > br {
+  display: none;
 }
 .wbTeamProTheme .logo {
-  float:left;
+  float: left;
 }
-
-/*******************************************************************************************/
-.wbTeamProTheme h3 {
-  color:#336699;
-  font-family: 'Roboto Condensed', sans-serif!important;
-  font-size:18px;
-  font-weight:normal;
-  margin:0;
-  padding:0 0 5px 0;
+.wbTeamProTheme a {
+  color: #286090;
 }
-.wbTeamProTheme h4 {
-  color:#003377;
-  font-family: 'Roboto Condensed', sans-serif!important;
-  font-size:15px;
-  font-weight:normal;
-  margin:0;
-  padding:0 0 5px 0;
+.wbTeamProTheme select,
+.wbTeamProTheme textarea,
+.wbTeamProTheme input[type=text] {
+  padding: 4px 6px;
+  line-height: 16px;
+  font-size: 14px;
+  box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
 }
-
-
-/*******************************************************************************************/
-.wbTeamProTheme form select,
-.wbTeamProTheme form input[type=text],
-.wbTeamProTheme form textarea {
-  padding:4px;
-  font-size:14px;
-}
-
-/*******************************************************************************************/
-.wbTeamProTheme .buttons_view_bug tr td {
-  white-space:nowrap;
-}
-
-/*******************************************************************************************/
-.wbTeamProTheme .please-login {
-  font-size:14px;
-  padding:10px 0;
-  margin:10px auto;
-  width:80%;
-  border-radius:4px;
-  background-color:#FFFFCC;
-  border:1px solid #EEEECC;
-}
-
-/*******************************************************************************************/
 .wbTeamProTheme input.button,
 .wbTeamProTheme input.button-small {
-  border-radius:2px;
-  border:1px solid #999;
-  background:#EEE;
-  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFEF', endColorstr='#CCCCCC'); /* for IE */
-  background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), to(#CCCCCC)); /* for webkit browsers */
-  background: -moz-linear-gradient(top,  #EFEFEF,  #CCCCCC); /* for firefox 3.6+ */
-  padding:2px 6px;
-  color:#333;
+  border-radius: 2px;
+  border: 1px solid #999;
+  background: #EEE;
+  padding: 4px 6px;
+  color: #333;
+  line-height: 16px;
+  font-size: 12px;
+  margin: 0 4px;
 }
-.wbTeamProTheme input.button.btn_vote {
-  background-color:#6699FF;
-  border:1px solid #777;
-  color:#FFF;
-  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6699FF', endColorstr='#4477DD'); /* for IE */
-  background: -webkit-gradient(linear, left top, left bottom, from(#6699FF), to(#4477DD)); /* for webkit browsers */
-  background: -moz-linear-gradient(top,  #6699FF,  #4477DD); /* for firefox 3.6+ */
+.wbTeamProTheme input.button.btn_vote,
+.wbTeamProTheme input.button-small.btn_vote {
+  background-color: #6699FF;
+  border: 1px solid #777;
+  color: #FFF;
 }
-.wbTeamProTheme input.button[disabled=disabled] {
-  border:1px solid #CCC;
-  background:#EEE;
-  color:#999;
+.wbTeamProTheme input.button[disabled=disabled],
+.wbTeamProTheme input.button-small[disabled=disabled] {
+  border: 1px solid #CCC;
+  background: #EEE;
+  color: #999;
 }
-
-/*******************************************************************************************/
-.wbTeamProTheme tr.row-1 { background-color: #F0F0F0; }
-.wbTeamProTheme tr.row-2 { background-color: #F0F0F0; }
-.wbTeamProTheme td.category { background-color: #DDDDDD; }
+.wbTeamProTheme h3 {
+  color: #336699;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+.wbTeamProTheme h4 {
+  color: #003377;
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+.wbTeamProTheme .hide .login-info-left,
+.wbTeamProTheme .hide .login-info-middle,
+.wbTeamProTheme .hide .login-info-right {
+  text-align: right;
+  display: block;
+  position: absolute;
+  width: auto;
+  top: 12px;
+  right: 180px;
+  font-size: 10px;
+  z-index: 100;
+  font-size: 12px;
+}
+.wbTeamProTheme .hide .login-info-left > *,
+.wbTeamProTheme .hide .login-info-middle > *,
+.wbTeamProTheme .hide .login-info-right > * {
+  font-size: 12px;
+}
+.wbTeamProTheme .hide .login-info-middle {
+  top: 28px;
+}
+.wbTeamProTheme .hide .login-info-right {
+  top: 56px;
+  right: 18px;
+}
+.wbTeamProTheme .hide .login-info-right a:after {
+  content: "RSS Feed";
+}
+.wbTeamProTheme table tr td {
+  padding: 5px;
+  text-align: left;
+}
+.wbTeamProTheme table#buglist tr td {
+  padding: 10px;
+}
+.wbTeamProTheme table#buglist tr.spacer {
+  display: none;
+}
+.wbTeamProTheme .width100 {
+  clear: both;
+  border: 0;
+  margin: 10px 0;
+}
+.wbTeamProTheme .width100 + br,
+.wbTeamProTheme .width100 + .hide {
+  height: 0;
+}
+.wbTeamProTheme .width100 .menu {
+  color: transparent;
+  font-size: 0px;
+  max-width: 100%;
+  background: transparent;
+  text-align: left;
+  line-height: 32px;
+  display: block;
+}
+.wbTeamProTheme .width100 .menu:text {
+  text-indent: -999px;
+}
+.wbTeamProTheme .width100 .menu.right {
+  text-align: right;
+}
+.wbTeamProTheme .width100 .menu a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  margin: 3px;
+  transition: background-color 0.5s, border-bottom 0.5s;
+}
+.wbTeamProTheme .width100 .menu a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+}
+.wbTeamProTheme .width100 .menu a.dashboard {
+  background-color: #337AB7;
+  border-bottom: 2px solid #286090;
+  color: white;
+}
+.wbTeamProTheme .width100 .menu a.bugs,
+.wbTeamProTheme .width100 .menu a.suggestions {
+  background-color: #5CB85C;
+  border-bottom: 2px solid #398439;
+  background-color: #5BC0DE;
+  border-bottom: 2px solid #269ABC;
+  color: white;
+}
+.wbTeamProTheme .width100 .menu a[href*=bug_report_page] {
+  background-color: #D9534F;
+  border-bottom: 2px solid #C9302C;
+  color: white;
+}
+.wbTeamProTheme .width100 .menu a[href*=my_view_page],
+.wbTeamProTheme .width100 .menu a[href*=view_all_bug_page] {
+  display: none;
+}
+.wbTeamProTheme .width100 .menu.right {
+  width: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wbTeamProTheme .width100 .menu.right input {
+  vertical-align: top;
+}
+.wbTeamProTheme .width100 .menu.right input[type=text] {
+  max-width: 100px;
+}
+.wbTeamProTheme .width100 .vcenter {
+  display: block;
+}
+.wbTeamProTheme .width100 .vcenter .center {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.wbTeamProTheme .width100 .vcenter .center form {
+  white-space: nowrap;
+}
+.wbTeamProTheme .width100 .form-title {
+  font-size: 18px;
+}
+.wbTeamProTheme .width100 .form-title > span {
+  display: block;
+}
+.wbTeamProTheme .width100.projects {
+  margin-top: 0px;
+}
+.wbTeamProTheme .width100.projects .menu a.active {
+  background-color: rgba(0, 180, 0, 0.7);
+  color: white;
+  border-bottom-color: rgba(0, 130, 0, 0.7);
+}
+.wbTeamProTheme .width100.projects + .hide + .width100 {
+  margin-top: -15px;
+}
+.wbTeamProTheme #filter_open,
+.wbTeamProTheme #filter_closed {
+  position: relative;
+  max-width: 100%;
+  padding: 50px 0 0 0;
+}
+.wbTeamProTheme #filter_open > br,
+.wbTeamProTheme #filter_closed > br {
+  display: none;
+}
+.wbTeamProTheme #filter_open > form,
+.wbTeamProTheme #filter_closed > form {
+  display: block;
+  overflow-x: auto;
+}
+.wbTeamProTheme #filter_open > form table,
+.wbTeamProTheme #filter_closed > form table {
+  margin: 0;
+}
+.wbTeamProTheme #filter_open > form table tr td,
+.wbTeamProTheme #filter_closed > form table tr td {
+  white-space: nowrap;
+  padding: 10px;
+  font-size: 1.0em;
+}
+.wbTeamProTheme #filter_open > form table tr td a,
+.wbTeamProTheme #filter_closed > form table tr td a {
+  text-decoration: none;
+}
+.wbTeamProTheme #filter_open > form table tr:last-child,
+.wbTeamProTheme #filter_closed > form table tr:last-child {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.wbTeamProTheme #filter_open > form table tr:last-child td,
+.wbTeamProTheme #filter_closed > form table tr:last-child td {
+  display: block;
+  white-space: nowrap;
+}
+.wbTeamProTheme #filter_open > form table tr:last-child td.center,
+.wbTeamProTheme #filter_closed > form table tr:last-child td.center {
+  position: absolute;
+  padding: 0;
+  top: -18px;
+  left: 0;
+  z-index: 100;
+}
+.wbTeamProTheme #filter_open > form table tr:last-child td.center span,
+.wbTeamProTheme #filter_closed > form table tr:last-child td.center span {
+  font-size: 0;
+}
+.wbTeamProTheme #filter_open > form table tr:last-child td.center span a,
+.wbTeamProTheme #filter_closed > form table tr:last-child td.center span a {
+  font-size: 12px;
+}
+.wbTeamProTheme #filter_open > form table tr:last-child td.right,
+.wbTeamProTheme #filter_closed > form table tr:last-child td.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.wbTeamProTheme .buttons_view_bug tr td {
+  white-space: nowrap;
+}
+.wbTeamProTheme .please-login {
+  font-size: 14px;
+  padding: 10px 0;
+  margin: 10px auto;
+  width: 80%;
+  border-radius: 4px;
+  background-color: #FFFFCC;
+  border: 1px solid #EEEECC;
+}
+.wbTeamProTheme tr.row-1 {
+  background-color: #F0F0F0;
+}
+.wbTeamProTheme tr.row-2 {
+  background-color: #F0F0F0;
+}
+.wbTeamProTheme td.category {
+  background-color: #DDDDDD;
+}
 .wbTeamProTheme tr.row-category,
-.wbTeamProTheme tr.row-category2 { background-color: #DDDDDD; }
-.wbTeamProTheme tr.row-category a,
-.wbTeamProTheme tr.row-category2 a {}
+.wbTeamProTheme tr.row-category2 {
+  background-color: #DDDDDD;
+}
 .wbTeamProTheme tr td .issue-status {
-  border:none;
+  border: none;
 }
