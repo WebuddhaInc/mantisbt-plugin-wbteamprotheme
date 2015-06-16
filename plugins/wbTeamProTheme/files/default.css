@@ -8,6 +8,7 @@
  ************************************************************************************************************************************/
 /*******************************************************************************************/
 /*******************************************************************************************/
+/*******************************************************************************************/
 body {
   margin: 0;
   padding: 0;
@@ -15,8 +16,9 @@ body {
 }
 /*******************************************************************************************/
 .wbTeamProTheme {
+  box-sizing: border-box;
   background: #FFF;
-  max-width: 1000px;
+  max-width: 1300px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -30,7 +32,7 @@ body {
 }
 .wbTeamProTheme #bodycolpad {
   position: relative;
-  padding: 15px 10px 15px 10px;
+  padding: 15px 25px;
 }
 .wbTeamProTheme > br {
   display: none;
@@ -98,8 +100,8 @@ body {
   display: block;
   position: absolute;
   width: auto;
-  top: 40px;
-  right: 10px;
+  top: 47px;
+  right: 25px;
   font-size: 10px;
   z-index: 100;
   font-size: 12px;
@@ -115,8 +117,8 @@ body {
   vertical-align: top;
 }
 .wbTeamProTheme .hide .login-info-middle {
-  top: 56px;
-  right: 100px;
+  top: 63px;
+  right: 125px;
   line-height: 26px;
 }
 .wbTeamProTheme .hide .login-info-right {
@@ -125,15 +127,15 @@ body {
 }
 .wbTeamProTheme .hide .login-info-right > form {
   position: absolute;
-  top: 10px;
-  right: 170px;
+  top: 15px;
+  right: 195px;
   text-indent: -9999px;
   font-size: 0;
 }
 .wbTeamProTheme .hide .login-info-right > a {
   position: absolute;
-  top: 56px;
-  right: 10px;
+  top: 63px;
+  right: 25px;
   display: block;
   padding: 5px;
 }
@@ -217,8 +219,8 @@ body {
 .wbTeamProTheme .width100 .menu.right {
   width: auto;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 25px;
   padding: 0;
 }
 .wbTeamProTheme .width100 .menu.right input {

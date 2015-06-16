@@ -11,6 +11,10 @@
 @import url(/plugin_file.php?file=wbTeamProTheme/normalize.css);
 
 /*******************************************************************************************/
+@bodycol_padding_vert: 15px;
+@bodycol_padding_horiz: 25px;
+
+/*******************************************************************************************/
 body {
   margin: 0;
   padding: 0;
@@ -20,8 +24,9 @@ body {
 /*******************************************************************************************/
 .wbTeamProTheme {
 
+  box-sizing: border-box;
   background:#FFF;
-  max-width: 1000px;
+  max-width: 1300px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -29,7 +34,7 @@ body {
 
   #bodycolpad {
     position:relative;
-    padding:15px 10px 15px 10px;
+    padding: @bodycol_padding_vert @bodycol_padding_horiz;
   }
 
   > br {
@@ -103,8 +108,8 @@ body {
       display: block;
       position: absolute;
       width: auto;
-      top: 40px;
-      right: 10px;
+      top: 32px + @bodycol_padding_vert;
+      right: @bodycol_padding_horiz;
       font-size: 10px;
       z-index: 100;
       font-size: 12px;
@@ -116,8 +121,8 @@ body {
       }
     }
     .login-info-middle {
-      top: 56px;
-      right: 100px;
+      top: 48px + @bodycol_padding_vert;
+      right: 100px + @bodycol_padding_horiz;
       line-height: 26px;
     }
     .login-info-right {
@@ -125,15 +130,15 @@ body {
       right: 0;
       > form {
         position: absolute;
-        top: 10px;
-        right: 170px;
+        top: @bodycol_padding_vert;
+        right: 170px + @bodycol_padding_horiz;
         text-indent: -9999px;
         font-size: 0;
       }
       > a {
         position: absolute;
-        top: 56px;
-        right: 10px;
+        top: 48px + @bodycol_padding_vert;
+        right: @bodycol_padding_horiz;
         display: block;
         padding: 5px;
         &:after {
@@ -231,8 +236,8 @@ body {
     .menu.right {
       width: auto;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: @bodycol_padding_vert;
+      right: @bodycol_padding_horiz;
       padding: 0;
       input {
         vertical-align: top;
