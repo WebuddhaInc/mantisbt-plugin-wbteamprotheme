@@ -98,8 +98,8 @@ body {
   display: block;
   position: absolute;
   width: auto;
-  top: 12px;
-  right: 180px;
+  top: 40px;
+  right: 10px;
   font-size: 10px;
   z-index: 100;
   font-size: 12px;
@@ -109,14 +109,35 @@ body {
 .wbTeamProTheme .hide .login-info-right > * {
   font-size: 12px;
 }
+.wbTeamProTheme .hide .login-info-left *,
+.wbTeamProTheme .hide .login-info-middle *,
+.wbTeamProTheme .hide .login-info-right * {
+  vertical-align: top;
+}
 .wbTeamProTheme .hide .login-info-middle {
-  top: 28px;
+  top: 56px;
+  right: 100px;
+  line-height: 26px;
 }
 .wbTeamProTheme .hide .login-info-right {
-  top: 56px;
-  right: 18px;
+  top: 0;
+  right: 0;
 }
-.wbTeamProTheme .hide .login-info-right a:after {
+.wbTeamProTheme .hide .login-info-right > form {
+  position: absolute;
+  top: 10px;
+  right: 170px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+.wbTeamProTheme .hide .login-info-right > a {
+  position: absolute;
+  top: 56px;
+  right: 10px;
+  display: block;
+  padding: 5px;
+}
+.wbTeamProTheme .hide .login-info-right > a:after {
   content: "RSS Feed";
 }
 .wbTeamProTheme table tr td {
@@ -198,11 +219,13 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
+  padding: 0;
 }
 .wbTeamProTheme .width100 .menu.right input {
   vertical-align: top;
 }
 .wbTeamProTheme .width100 .menu.right input[type=text] {
+  color: gray;
   max-width: 100px;
 }
 .wbTeamProTheme .width100 .vcenter {

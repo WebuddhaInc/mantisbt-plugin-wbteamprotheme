@@ -103,23 +103,42 @@ body {
       display: block;
       position: absolute;
       width: auto;
-      top: 12px;
-      right: 180px;
+      top: 40px;
+      right: 10px;
       font-size: 10px;
       z-index: 100;
       font-size: 12px;
       > * {
         font-size: 12px;
       }
+      * {
+        vertical-align: top;
+      }
     }
     .login-info-middle {
-      top: 28px;
+      top: 56px;
+      right: 100px;
+      line-height: 26px;
     }
     .login-info-right {
-      top: 56px;
-      right: 18px;
-      a:after {
-        content: "RSS Feed";
+      top: 0;
+      right: 0;
+      > form {
+        position: absolute;
+        top: 10px;
+        right: 170px;
+        text-indent: -9999px;
+        font-size: 0;
+      }
+      > a {
+        position: absolute;
+        top: 56px;
+        right: 10px;
+        display: block;
+        padding: 5px;
+        &:after {
+          content: "RSS Feed";
+        }
       }
     }
   }
@@ -214,10 +233,12 @@ body {
       position: absolute;
       top: 10px;
       right: 10px;
+      padding: 0;
       input {
         vertical-align: top;
       }
       input[type=text] {
+        color: gray;
         max-width: 100px;
       }
     }
