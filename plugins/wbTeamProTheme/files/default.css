@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
-@import url(/plugin_file.php?file=wbTeamProTheme/normalize.css);
 /************************************************************************************************************************************
  *
  * wbTeamProTheme plugin for MantisBT
@@ -7,6 +5,10 @@
  *
  ************************************************************************************************************************************/
 /*******************************************************************************************/
+/*
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+@import url(/plugin_file.php?file=wbTeamProTheme/normalize.css);
+*/
 /*******************************************************************************************/
 /*******************************************************************************************/
 body {
@@ -15,7 +17,8 @@ body {
   background: #F5F5F5;
 }
 /*******************************************************************************************/
-.wbTeamProTheme {
+#bodycol {
+  min-width: 360px;
   box-sizing: border-box;
   background: #FFF;
   max-width: 1300px;
@@ -30,22 +33,22 @@ body {
   /*******************************************************************************************/
   /*******************************************************************************************/
 }
-.wbTeamProTheme #bodycolpad {
+#bodycol #bodycolpad {
   position: relative;
   padding: 15px 25px;
 }
-.wbTeamProTheme > br {
+#bodycol > br {
   display: none;
 }
-.wbTeamProTheme .logo {
+#bodycol .logo {
   float: left;
 }
-.wbTeamProTheme a {
+#bodycol a {
   color: #286090;
 }
-.wbTeamProTheme select,
-.wbTeamProTheme textarea,
-.wbTeamProTheme input[type=text] {
+#bodycol select,
+#bodycol textarea,
+#bodycol input[type=text] {
   padding: 4px 6px;
   line-height: 16px;
   font-size: 14px;
@@ -54,8 +57,8 @@ body {
   border-radius: 2px;
   box-sizing: border-box;
 }
-.wbTeamProTheme input.button,
-.wbTeamProTheme input.button-small {
+#bodycol input.button,
+#bodycol input.button-small {
   border-radius: 2px;
   border: 1px solid #999;
   background: #EEE;
@@ -65,19 +68,19 @@ body {
   font-size: 12px;
   margin: 0 4px;
 }
-.wbTeamProTheme input.button.btn_vote,
-.wbTeamProTheme input.button-small.btn_vote {
+#bodycol input.button.btn_vote,
+#bodycol input.button-small.btn_vote {
   background-color: #6699FF;
   border: 1px solid #777;
   color: #FFF;
 }
-.wbTeamProTheme input.button[disabled=disabled],
-.wbTeamProTheme input.button-small[disabled=disabled] {
+#bodycol input.button[disabled=disabled],
+#bodycol input.button-small[disabled=disabled] {
   border: 1px solid #CCC;
   background: #EEE;
   color: #999;
 }
-.wbTeamProTheme h3 {
+#bodycol h3 {
   color: #336699;
   font-family: 'Roboto Condensed', sans-serif !important;
   font-size: 18px;
@@ -85,7 +88,7 @@ body {
   margin: 0;
   padding: 0 0 5px 0;
 }
-.wbTeamProTheme h4 {
+#bodycol h4 {
   color: #003377;
   font-family: 'Roboto Condensed', sans-serif !important;
   font-size: 15px;
@@ -93,9 +96,9 @@ body {
   margin: 0;
   padding: 0 0 5px 0;
 }
-.wbTeamProTheme .hide .login-info-left,
-.wbTeamProTheme .hide .login-info-middle,
-.wbTeamProTheme .hide .login-info-right {
+#bodycol .hide .login-info-left,
+#bodycol .hide .login-info-middle,
+#bodycol .hide .login-info-right {
   text-align: right;
   display: block;
   position: absolute;
@@ -106,62 +109,62 @@ body {
   z-index: 100;
   font-size: 12px;
 }
-.wbTeamProTheme .hide .login-info-left > *,
-.wbTeamProTheme .hide .login-info-middle > *,
-.wbTeamProTheme .hide .login-info-right > * {
+#bodycol .hide .login-info-left > *,
+#bodycol .hide .login-info-middle > *,
+#bodycol .hide .login-info-right > * {
   font-size: 12px;
 }
-.wbTeamProTheme .hide .login-info-left *,
-.wbTeamProTheme .hide .login-info-middle *,
-.wbTeamProTheme .hide .login-info-right * {
+#bodycol .hide .login-info-left *,
+#bodycol .hide .login-info-middle *,
+#bodycol .hide .login-info-right * {
   vertical-align: top;
 }
-.wbTeamProTheme .hide .login-info-middle {
+#bodycol .hide .login-info-middle {
   top: 63px;
   right: 125px;
   line-height: 26px;
 }
-.wbTeamProTheme .hide .login-info-right {
+#bodycol .hide .login-info-right {
   top: 0;
   right: 0;
 }
-.wbTeamProTheme .hide .login-info-right > form {
+#bodycol .hide .login-info-right > form {
   position: absolute;
   top: 15px;
   right: 195px;
   text-indent: -9999px;
   font-size: 0;
 }
-.wbTeamProTheme .hide .login-info-right > a {
+#bodycol .hide .login-info-right > a {
   position: absolute;
   top: 63px;
   right: 25px;
   display: block;
   padding: 5px;
 }
-.wbTeamProTheme .hide .login-info-right > a:after {
+#bodycol .hide .login-info-right > a:after {
   content: "RSS Feed";
 }
-.wbTeamProTheme table tr td {
+#bodycol table tr td {
   padding: 5px;
   text-align: left;
 }
-.wbTeamProTheme table#buglist tr td {
+#bodycol table#buglist tr td {
   padding: 10px;
 }
-.wbTeamProTheme table#buglist tr.spacer {
+#bodycol table#buglist tr.spacer {
   display: none;
 }
-.wbTeamProTheme .width100 {
+#bodycol .width100 {
   clear: both;
   border: 0;
   margin: 10px 0;
 }
-.wbTeamProTheme .width100 + br,
-.wbTeamProTheme .width100 + .hide {
+#bodycol .width100 + br,
+#bodycol .width100 + .hide {
   height: 0;
 }
-.wbTeamProTheme .width100 .menu {
+#bodycol .width100 .menu {
   color: transparent;
   font-size: 0px;
   max-width: 100%;
@@ -170,13 +173,13 @@ body {
   line-height: 32px;
   display: block;
 }
-.wbTeamProTheme .width100 .menu:text {
+#bodycol .width100 .menu:text {
   text-indent: -999px;
 }
-.wbTeamProTheme .width100 .menu.right {
+#bodycol .width100 .menu.right {
   text-align: right;
 }
-.wbTeamProTheme .width100 .menu a {
+#bodycol .width100 .menu a {
   color: #333;
   text-decoration: none;
   font-size: 14px;
@@ -185,111 +188,111 @@ body {
   margin: 3px;
   transition: background-color 0.5s, border-bottom 0.5s;
 }
-.wbTeamProTheme .width100 .menu a:hover {
+#bodycol .width100 .menu a:hover {
   background-color: rgba(0, 0, 0, 0.05);
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
 }
-.wbTeamProTheme .width100 .menu a.dashboard {
+#bodycol .width100 .menu a.dashboard {
   background-color: #337AB7;
   border-bottom: 2px solid #286090;
   color: white;
 }
-.wbTeamProTheme .width100 .menu a.bugs,
-.wbTeamProTheme .width100 .menu a.suggestions {
+#bodycol .width100 .menu a.bugs,
+#bodycol .width100 .menu a.suggestions {
   background-color: #5CB85C;
   border-bottom: 2px solid #398439;
   background-color: #5BC0DE;
   border-bottom: 2px solid #269ABC;
   color: white;
 }
-.wbTeamProTheme .width100 .menu a.login_report,
-.wbTeamProTheme .width100 .menu a[href*=bug_report_page] {
+#bodycol .width100 .menu a.login_report,
+#bodycol .width100 .menu a[href*=bug_report_page] {
   background-color: #D9534F;
   border-bottom: 2px solid #C9302C;
   color: white;
 }
-.wbTeamProTheme .width100 .menu a[href*=my_view_page],
-.wbTeamProTheme .width100 .menu a[href*=view_all_bug_page] {
+#bodycol .width100 .menu a[href*=my_view_page],
+#bodycol .width100 .menu a[href*=view_all_bug_page] {
   display: none;
 }
-.wbTeamProTheme .width100 .menu a[href*=logout] {
+#bodycol .width100 .menu a[href*=logout] {
   background-color: #eee;
   border-bottom: 2px solid #ddd;
   color: gray;
 }
-.wbTeamProTheme .width100 .menu.right {
+#bodycol .width100 .menu.right {
   width: auto;
   position: absolute;
   top: 15px;
   right: 25px;
   padding: 0;
 }
-.wbTeamProTheme .width100 .menu.right input {
+#bodycol .width100 .menu.right input {
   vertical-align: top;
 }
-.wbTeamProTheme .width100 .menu.right input[type=text] {
+#bodycol .width100 .menu.right input[type=text] {
   color: gray;
   max-width: 100px;
 }
-.wbTeamProTheme .width100 .vcenter {
+#bodycol .width100 .vcenter {
   display: block;
 }
-.wbTeamProTheme .width100 .vcenter .center {
+#bodycol .width100 .vcenter .center {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-.wbTeamProTheme .width100 .vcenter .center form {
+#bodycol .width100 .vcenter .center form {
   white-space: nowrap;
 }
-.wbTeamProTheme .width100 .form-title {
+#bodycol .width100 .form-title {
   font-size: 18px;
 }
-.wbTeamProTheme .width100 .form-title > span {
+#bodycol .width100 .form-title > span {
   display: block;
 }
-.wbTeamProTheme .width100.projects {
+#bodycol .width100.projects {
   margin-top: 0px;
 }
-.wbTeamProTheme .width100.projects .menu a.active {
+#bodycol .width100.projects .menu a.active {
   background-color: rgba(0, 180, 0, 0.7);
   color: white;
   border-bottom-color: rgba(0, 130, 0, 0.7);
 }
-.wbTeamProTheme .width100.projects + .hide + .width100 {
+#bodycol .width100.projects + .hide + .width100 {
   margin-top: -15px;
 }
-.wbTeamProTheme #filter_open,
-.wbTeamProTheme #filter_closed {
+#bodycol #filter_open,
+#bodycol #filter_closed {
   position: relative;
   max-width: 100%;
   padding: 50px 0 0 0;
 }
-.wbTeamProTheme #filter_open > br,
-.wbTeamProTheme #filter_closed > br {
+#bodycol #filter_open > br,
+#bodycol #filter_closed > br {
   display: none;
 }
-.wbTeamProTheme #filter_open > form,
-.wbTeamProTheme #filter_closed > form {
+#bodycol #filter_open > form,
+#bodycol #filter_closed > form {
   display: block;
   overflow-x: auto;
 }
-.wbTeamProTheme #filter_open > form table,
-.wbTeamProTheme #filter_closed > form table {
+#bodycol #filter_open > form > table,
+#bodycol #filter_closed > form > table {
   margin: 0;
 }
-.wbTeamProTheme #filter_open > form table tr td,
-.wbTeamProTheme #filter_closed > form table tr td {
+#bodycol #filter_open > form > table > tbody tr td,
+#bodycol #filter_closed > form > table > tbody tr td {
   white-space: nowrap;
   padding: 10px;
-  font-size: 1.0em;
+  font-size: 1em;
 }
-.wbTeamProTheme #filter_open > form table tr td a,
-.wbTeamProTheme #filter_closed > form table tr td a {
+#bodycol #filter_open > form > table > tbody tr td a,
+#bodycol #filter_closed > form > table > tbody tr td a {
   text-decoration: none;
 }
-.wbTeamProTheme #filter_open > form table tr:last-child,
-.wbTeamProTheme #filter_closed > form table tr:last-child {
+#bodycol #filter_open > form > table > tbody > tr:last-child,
+#bodycol #filter_closed > form > table > tbody > tr:last-child {
   display: block;
   position: absolute;
   top: 0;
@@ -298,37 +301,37 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
 }
-.wbTeamProTheme #filter_open > form table tr:last-child td,
-.wbTeamProTheme #filter_closed > form table tr:last-child td {
+#bodycol #filter_open > form > table > tbody > tr:last-child td,
+#bodycol #filter_closed > form > table > tbody > tr:last-child td {
   display: block;
   white-space: nowrap;
 }
-.wbTeamProTheme #filter_open > form table tr:last-child td.center,
-.wbTeamProTheme #filter_closed > form table tr:last-child td.center {
+#bodycol #filter_open > form > table > tbody > tr:last-child td.center,
+#bodycol #filter_closed > form > table > tbody > tr:last-child td.center {
   position: absolute;
   padding: 0;
   top: -18px;
   left: 0;
   z-index: 100;
 }
-.wbTeamProTheme #filter_open > form table tr:last-child td.center span,
-.wbTeamProTheme #filter_closed > form table tr:last-child td.center span {
+#bodycol #filter_open > form > table > tbody > tr:last-child td.center span,
+#bodycol #filter_closed > form > table > tbody > tr:last-child td.center span {
   font-size: 0;
 }
-.wbTeamProTheme #filter_open > form table tr:last-child td.center span a,
-.wbTeamProTheme #filter_closed > form table tr:last-child td.center span a {
+#bodycol #filter_open > form > table > tbody > tr:last-child td.center span a,
+#bodycol #filter_closed > form > table > tbody > tr:last-child td.center span a {
   font-size: 12px;
 }
-.wbTeamProTheme #filter_open > form table tr:last-child td.right,
-.wbTeamProTheme #filter_closed > form table tr:last-child td.right {
+#bodycol #filter_open > form > table > tbody > tr:last-child td.right,
+#bodycol #filter_closed > form > table > tbody > tr:last-child td.right {
   position: absolute;
   top: 0;
   right: 0;
 }
-.wbTeamProTheme .buttons_view_bug tr td {
+#bodycol .buttons_view_bug tr td {
   white-space: nowrap;
 }
-.wbTeamProTheme .please-login {
+#bodycol .please-login {
   font-size: 14px;
   padding: 10px 0;
   margin: 10px auto;
@@ -337,19 +340,19 @@ body {
   background-color: #FFFFCC;
   border: 1px solid #EEEECC;
 }
-.wbTeamProTheme tr.row-1 {
+#bodycol tr.row-1 {
   background-color: #F0F0F0;
 }
-.wbTeamProTheme tr.row-2 {
+#bodycol tr.row-2 {
   background-color: #F0F0F0;
 }
-.wbTeamProTheme td.category {
+#bodycol td.category {
   background-color: #DDDDDD;
 }
-.wbTeamProTheme tr.row-category,
-.wbTeamProTheme tr.row-category2 {
+#bodycol tr.row-category,
+#bodycol tr.row-category2 {
   background-color: #DDDDDD;
 }
-.wbTeamProTheme tr td .issue-status {
+#bodycol tr td .issue-status {
   border: none;
 }

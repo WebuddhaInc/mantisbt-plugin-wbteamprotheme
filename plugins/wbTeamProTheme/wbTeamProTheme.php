@@ -112,7 +112,7 @@ class wbTeamProThemePlugin extends MantisPlugin  {
   function EVENT_LAYOUT_RESOURCES( $event ) {
 
     // Add stylesheet
-    echo '<link rel="stylesheet" type="text/css" href="', plugin_file( 'default.css' ), '"/>';
+    echo '<link rel="stylesheet" type="text/css" href="'. helper_mantis_url('plugins/wbTeamProTheme/files/default.css') .'"/>';
 
   }
 
