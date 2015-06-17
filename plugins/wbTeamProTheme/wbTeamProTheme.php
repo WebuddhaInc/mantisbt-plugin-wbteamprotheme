@@ -23,20 +23,47 @@ class wbTeamProThemePlugin extends MantisPlugin  {
    ***************************************************************************/
   function register( ) {
 
-    $this->name = lang_get( 'plugin_wbteamprotheme_title' );
-    $this->description = lang_get( 'plugin_wbteamprotheme_description' );
-    $this->page = 'config';
+    // Plugin
+      $this->name = lang_get( 'plugin_wbteamprotheme_title' );
+      $this->description = lang_get( 'plugin_wbteamprotheme_description' );
+      $this->page = 'config';
+      $this->version = '1.1';
+      $this->requires = array(
+        'MantisCore' => '1.2.19',
+      );
+      $this->author   = 'David Hunt, Webuddha.com';
+      $this->contact  = 'mantisbt-dev@webuddha.com';
+      $this->url      = 'http://www.webuddha.com';
 
-    $this->version = '1.1';
-    $this->requires = array(
-      'MantisCore' => '1.2.19',
-    );
+    // Initialize User Functions
+      $this->initUser();
+      $this->gracefulAnon();
 
-    $this->author   = 'David Hunt, Webuddha.com';
-    $this->contact  = 'mantisbt-dev@webuddha.com';
-    $this->url      = 'http://www.webuddha.com';
+  }
 
-    $this->gracefulAnon();
+  /***************************************************************************
+   *
+   *
+   *
+   ***************************************************************************/
+  function initUser(){
+
+    // Extract Globals
+      foreach( array_keys($GLOBALS) AS $key ){
+        ${ $key } =& $GLOBALS[ $key ];
+      }
+
+    // Require
+      require_once( 'authentication_api.php' );
+      require_once( 'current_user_api.php' );
+
+    // Move globals into global space
+      $defined_vars = get_defined_vars();
+      foreach( array_keys($defined_vars) AS $key ){
+        if( strpos($key, 'g_') === 0 && !isset($GLOBALS[ $key ]) ){
+          $GLOBALS[ $key ] = ${ $key };
+        }
+      }
 
   }
 
@@ -47,15 +74,13 @@ class wbTeamProThemePlugin extends MantisPlugin  {
    ***************************************************************************/
   function gracefulAnon() {
 
-    require_once( 'authentication_api.php' );
-    require_once( 'current_user_api.php' );
-
-    $p_user_id = auth_get_current_user_id();
-    if( user_is_protected($p_user_id) ){
-      if( strpos($_SERVER['REQUEST_URI'], 'account_') !== false ){
-        header('Location: login.php');
+    // Identify Anon & Redirect to Login
+      $p_user_id = auth_get_current_user_id();
+      if( user_is_protected($p_user_id) ){
+        if( strpos($_SERVER['REQUEST_URI'], 'account_') !== false ){
+          header('Location: login.php');
+        }
       }
-    }
 
   }
 
@@ -69,6 +94,7 @@ class wbTeamProThemePlugin extends MantisPlugin  {
       // 'EVENT_MENU_ISSUE'          => 'EVENT_MENU_ISSUE',
       // 'EVENT_LAYOUT_RIGHT_COLUMN' => 'EVENT_LAYOUT_RIGHT_COLUMN',
       // 'EVENT_MENU_MAIN_FRONT'     => 'EVENT_MENU_MAIN_FRONT',
+      'EVENT_MENU_MAIN'              => 'EVENT_MENU_MAIN',
       'EVENT_LAYOUT_RESOURCES'       => 'EVENT_LAYOUT_RESOURCES',
       'EVENT_LAYOUT_CONTENT_BEGIN'   => 'EVENT_LAYOUT_CONTENT_BEGIN',
       'EVENT_LAYOUT_CONTENT_END'     => 'EVENT_LAYOUT_CONTENT_END',
@@ -101,6 +127,10 @@ class wbTeamProThemePlugin extends MantisPlugin  {
       strpos($_SERVER['REQUEST_URI'], 'login') !== false
       ||
       strpos($_SERVER['REQUEST_URI'], 'logout') !== false
+      ||
+      strpos($_SERVER['REQUEST_URI'], 'signup') !== false
+      ||
+      strpos($_SERVER['REQUEST_URI'], 'lost_pwd') !== false
       ){
       return;
     }
@@ -122,6 +152,7 @@ class wbTeamProThemePlugin extends MantisPlugin  {
         echo '</tr>';
       echo '</table>';
     }
+
   }
 
   /***************************************************************************

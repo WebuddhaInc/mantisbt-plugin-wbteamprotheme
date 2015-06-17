@@ -202,6 +202,7 @@ body {
   border-bottom: 2px solid #269ABC;
   color: white;
 }
+.wbTeamProTheme .width100 .menu a.login_report,
 .wbTeamProTheme .width100 .menu a[href*=bug_report_page] {
   background-color: #D9534F;
   border-bottom: 2px solid #C9302C;
