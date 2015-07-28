@@ -149,7 +149,8 @@ body {
   text-align: left;
 }
 #bodycol table#buglist tr td {
-  padding: 10px;
+  max-width: 380px;
+  padding: 8px;
 }
 #bodycol table#buglist tr.spacer {
   display: none;
